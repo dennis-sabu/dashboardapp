@@ -1,27 +1,27 @@
-import React from 'react'
+import React from 'react';
 
 const Tasks = () => {
   const tasks = [
     {
       id: 1,
-      title: "Finish project report",
-      description: "Complete the final report for the project and submit it.",
-      status: "In Progress",
-      dueDate: "2025-02-18",
+      title: 'Finish project report',
+      description: 'Complete the final report for the project and submit it.',
+      status: 'In Progress',
+      dueDate: '2025-02-18',
     },
     {
       id: 2,
-      title: "Update website content",
-      description: "Revise the homepage text to reflect recent changes.",
-      status: "Pending",
-      dueDate: "2025-02-20",
+      title: 'Update website content',
+      description: 'Revise the homepage text to reflect recent changes.',
+      status: 'Pending',
+      dueDate: '2025-02-20',
     },
     {
       id: 3,
-      title: "Team meeting",
-      description: "Discuss the project milestones and progress with the team.",
-      status: "Completed",
-      dueDate: "2025-02-15",
+      title: 'Team meeting',
+      description: 'Discuss the project milestones and progress with the team.',
+      status: 'Completed',
+      dueDate: '2025-02-15',
     },
   ];
 
@@ -39,11 +39,11 @@ const Tasks = () => {
                 className="flex items-center justify-between bg-white rounded-lg shadow-md p-6 border-l-4"
                 style={{
                   borderColor:
-                    task.status === "Completed"
-                      ? "green"
-                      : task.status === "In Progress"
-                      ? "yellow"
-                      : "red",
+                    task.status === 'Completed'
+                      ? 'green'
+                      : task.status === 'In Progress'
+                      ? 'yellow'
+                      : 'red',
                 }}
               >
                 <div className="flex flex-col">
@@ -58,19 +58,39 @@ const Tasks = () => {
                   </p>
                 </div>
 
-                {/* Status Badge */}
+                {/* Status Badge and Actions */}
                 <div className="flex space-x-4">
                   <span
                     className={`px-4 py-2 text-center text-sm rounded-full ${
-                      task.status === "Completed"
-                        ? "bg-green-100 text-green-600"
-                        : task.status === "In Progress"
-                        ? "bg-yellow-100 text-yellow-600"
-                        : "bg-red-100 text-red-600"
+                      task.status === 'Completed'
+                        ? 'bg-green-100 text-green-600'
+                        : task.status === 'In Progress'
+                        ? 'bg-yellow-100 text-yellow-600'
+                        : 'bg-red-100 text-red-600'
                     }`}
                   >
                     {task.status}
                   </span>
+
+                  <button
+                    className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Edit
+                  </button>
+
+                  {task.status !== 'Completed' && (
+                    <button
+                      className="px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 transition-colors"
+                    >
+                      Mark as Complete
+                    </button>
+                  )}
+
+                  <button
+                    className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}
