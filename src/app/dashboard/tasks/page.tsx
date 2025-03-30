@@ -55,7 +55,7 @@ const Tasks = () => {
                 </div>
 
                 {/* Status Badge and Actions */}
-                <div className="flex flex-wrap sm:flex-nowrap space-y-2 sm:space-y-0 sm:space-x-4">
+                <div className="flex flex-wrap sm:flex-nowrap space-y-2 sm:space-y-0 sm:space-x-7">
                   <span
                     className={`px-4 py-2 text-center text-sm rounded-full ${
                       task.status === 'Completed'
