@@ -27,16 +27,16 @@ const Tasks = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-8">
-        <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-sm p-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-8">Tasks</h1>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 sm:p-8">
+        <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-sm p-4 sm:p-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Tasks</h1>
 
           {/* Tasks List Section */}
-          <section className="space-y-6">
+          <section className="space-y-4 sm:space-y-6">
             {tasks.map((task) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between bg-white rounded-lg shadow-md p-6 border-l-4"
+                className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4"
                 style={{
                   borderColor:
                     task.status === 'Completed'
@@ -46,20 +46,16 @@ const Tasks = () => {
                       : 'red',
                 }}
               >
-                <div className="flex flex-col">
-                  <h2 className="text-xl font-semibold text-gray-800">
+                <div className="flex flex-col mb-4 sm:mb-0">
+                  <h2 className="text-lg sm:text-xl font-semibold text-gray-800">
                     {task.title}
                   </h2>
-                  <p className="text-sm text-gray-600 mt-2">
-                    {task.description}
-                  </p>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Due Date: {task.dueDate}
-                  </p>
+                  <p className="text-sm text-gray-600 mt-2">{task.description}</p>
+                  <p className="text-sm text-gray-600 mt-2">Due Date: {task.dueDate}</p>
                 </div>
 
                 {/* Status Badge and Actions */}
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap sm:flex-nowrap space-y-2 sm:space-y-0 sm:space-x-4">
                   <span
                     className={`px-4 py-2 text-center text-sm rounded-full ${
                       task.status === 'Completed'
