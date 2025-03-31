@@ -3,8 +3,9 @@ import Link from 'next/link';
 
 const Dashboard = () => {
   return (
+    
     <>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
+      <div className="min-h-screenbg-gradient-to-br from-blue-50 via-indigo-100 flex items-center justify-center p-8">
         <div className="bg-white shadow-lg rounded-lg p-8 max-w-5xl w-full">
           <div className="flex flex-col mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">Dashboard</h1>
