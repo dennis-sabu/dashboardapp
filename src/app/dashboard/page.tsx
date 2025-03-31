@@ -4,11 +4,11 @@ import Link from 'next/link'
 const Dashboard = () => {
   return (
     <>
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8'>
-        <div className='max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 space-y-8'>
+      <div className='min-h-screen bg-gray-100 flex items-center justify-center p-6'>
+        <div className='"bg-white shadow-lg rounded-lg p-6 max-w-2xl w-full'>
           <div className='flex flex-col'>
-            <h1 className='text-4xl font-extrabold text-gray-900 mb-4 sm:mb-0'>Dashboard</h1>
-            <p className='text-lg text-gray-600 mt-3'>
+            <h1 className='text-2xl font-bold text-gray-800'>Dashboard</h1>
+            <p className='"text-gray-600 mt-2'>
               Welcome back! Here you can manage your tasks, view analytics, and make adjustments.
             </p>
           </div>
